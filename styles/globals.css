@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+:root {
+  --side-spacing-desktop: 0 6.8em;
+
+  --btn-border: 0.8em;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button a {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.3rem;
+  color: #343434;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #343434;
+}
+
+p {
+  color: #343434;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  position: relative;
+}
+
+p {
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 6.8em 0 6.8em;
+}
+
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+nav .nav__links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__links li a {
+  font-size: 1rem;
+}
+
+nav .nav__btns {
+  display: flex;
+  width: 22%;
+  justify-content: space-between;
+}
+
+nav .nav__btns button:first-child {
+  border: 2px solid #7D00C6;
+  background-color: transparent;
+  border-radius: var(--btn-border);
+}
+
+.nav__btns button:first-child a {
+  color: #7D00C6;
+  width: 7.4em;
+}
+
+nav .nav__btns button:last-child {
+  background-color: #7D00C6;
+  border-radius: var(--btn-border);
+  color: #fff;
+  width: 7.4em;
+}
+
+.nav__btns button:last-child a {
+  color: #fff;
+}

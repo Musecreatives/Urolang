@@ -1,0 +1,44 @@
+.price__header {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.price__header h2 {
+    margin-top: .2em;
+}
+
+.price__header .monthly__year__price__btn {
+    margin-top: 5em;
+    margin-left: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthly__year__price__btn .btn {
+    background-color: #7D00C6;
+    height: 40px;
+    width: 74px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    margin: 0 1em;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    justify-content: right;
+}
+
+.monthly__year__price__btn h4 {
+    font-size: 1.2rem;
+    color: #9A979F;
+}
+
+.monthly__year__price__btn .btn .btn__ctrl {
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    border-radius: 50%;
+}

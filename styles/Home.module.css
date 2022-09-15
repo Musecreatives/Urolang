@@ -1,0 +1,157 @@
+.dbl__btn {
+  display: flex;
+}
+
+.header {
+  height: 170vh;
+  /* background-image: radial-gradient(circle, #E5DCFD 10%, #FEEDFC 100%); */
+  background-image: linear-gradient(to bottom,#ECDFFE 50%, #FEEDFC 70%, transparent 80%);
+  /* background-image: linear-gradient(to bottom, #E5DCFD 0%, #FEEFFE 40%, transparent 100%); */
+  
+}
+
+.header__title {
+  width: 60%;
+  margin: auto;
+  padding-top: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.header__title h1 {
+  font-size: 3.8rem;
+}
+
+.header__title p {
+  margin-top: 1em;
+}
+
+.header__title button {
+  width: 9em;
+  margin: 3em auto;
+  border-radius: .4em;
+  background-color: #7D00C6;
+}
+
+.header__title button a {
+  color: #fff;
+}
+
+section.about__urolang {
+  height: auto;
+  position: absolute;
+  top: 42em;
+  left: 15%;
+}
+
+section .how__to__start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.how__to__start .lft__side {
+  width: 50%;
+}
+
+.how__to__start .right__side {
+  width: 50%;
+}
+
+.how__to__start .right__side h2 {
+  margin-top: 0.3em;
+}
+
+.how__to__start .right__side p {
+  margin-top: .6em;
+}
+
+.how__to__start ul {
+  margin-top: 1.2em;
+  margin-left: 1em;
+}
+
+.how__to__start .right__side ul li {
+  display: flex;
+  align-items: center;
+}
+
+.how__to__start .right__side li p {
+  padding-left: .6em;
+  padding-bottom: .7em;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.how__to__start .dbl__btn {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.how__to__start .dbl__btn .btn1 {
+  background-color: #FFB000;
+  padding: 0 15px;
+  border-radius: .6em;
+}
+
+.how__to__start .dbl__btn .btn2 {
+  border: 1px #FFB000 solid;
+  background-color: transparent;
+  padding: 0 15px;
+  margin-left: 1em;
+  border-radius: .6em;
+}
+
+.how__to__start .dbl__btn .btn2  a {
+  margin-left: 1em;
+}
+
+.how__to__start .dbl__btn a {
+  color: black;
+  font-weight: 500;
+}
+
+.about__lang {
+  margin-top: 5em !important;
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+
+.about__lang .left__side {
+  width: 50%;
+}
+
+.about__lang .right__side {
+  width: 50%;
+}
+
+.about__lang .left__side h2 {
+  margin-top: .3em;
+}
+
+.about__lang .left__side p {
+  margin-top: 1em;
+}
+
+.about__lang .left__side button {
+  margin-top: 1.5em;
+  padding: 0 15px;
+  background-color: #7D00C6;
+  border-radius: .6em;
+}
+
+.about__lang .left__side button a {
+  color: #fff;
+}
+
+.pricing__plan__container {
+  padding: 0 6.8em;
+}
+
+.pricing__plan__container .content {
+  margin-top: 10em;
+}
