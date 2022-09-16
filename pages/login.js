@@ -34,7 +34,7 @@ export default function Login ()  {
                 <p>Don't have an account? Click below to create account</p>
             </div>
             <button className={styles.btn2}>
-                <Link href="#"><a>Create Account</a></Link>
+                <Link href="/signup"><a>Create Account</a></Link>
             </button>
           </div>
         </div>

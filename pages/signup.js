@@ -26,13 +26,13 @@ export default function signup ()  {
                 </div>
             </form>
             <button className={styles.btn1}>
-                <Link href="#"><a>Sign Up</a></Link>
+                <Link href="/signup"><a>Sign Up</a></Link>
             </button>
             <div className={styles.dont_have_account}>
                 <p>Have an account? Click below to login</p>
             </div>
             <button className={styles.btn2}>
-                <Link href="#"><a>Login</a></Link>
+                <Link href="/login"><a>Login</a></Link>
             </button>
           </div>
         </div>
