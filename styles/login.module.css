@@ -11,12 +11,22 @@
 }
 
 .login_right_side {
+    height: 660px;
   width: 50%;
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-top-left-radius: 1.6em;
+  border-bottom-left-radius: 1.6em;
   background-color: blue;
 }
 
+.login_right_side h1 {
+    color: #fff;
+}
+
 .urolang_logo {
-    margin-top: 3em;
+    margin-top: 5em;
     margin-bottom: 1.2em;
 }
 
@@ -42,7 +52,7 @@
 .form_group input {
   width: 545px;
   height: 3em;
-  border-radius: .6em;
+  border-radius: .8em;
   border: 2.5px solid #7D00C6;
   padding-left: .6em;
   font-size: 1.2rem;
@@ -56,13 +66,13 @@
 
 .forgot_password {
   margin-left: 20em;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
  .btn1 {
-    width: 550px;
+    width: 540px;
     height: 3em;
     border-radius: .6em;
     background-color: #7D00C6;
