@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.monthly__year__price__btn .btn {
+.monthly__year__price__btn .price__btn {
     background-color: #7D00C6;
     height: 40px;
     width: 74px;
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     padding: 0 4px;
-    justify-content: right;
+    justify-content: left;
 }
 
 .monthly__year__price__btn h4 {
@@ -36,9 +36,67 @@
     color: #9A979F;
 }
 
-.monthly__year__price__btn .btn .btn__ctrl {
+.monthly__year__price__btn .price__btn .btn__ctrl {
     height: 32px;
     width: 32px;
     background-color: white;
     border-radius: 50%;
+}
+
+.plan__description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.plan__description .card {
+    width: 31.5%;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 1px 2px 4px #f6f3fd;
+    border-radius: 10px;
+    padding: 1.2em 1.2em;
+}
+
+.card h2 {
+    font-size: 1.7em;
+}
+
+.c__heading {
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.card .c__heading p {
+    margin-top: 1.2em;
+    color: #8C94A3;
+    font-size: 1.1rem;
+}
+
+.plan__description .card ul {
+    
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.card ul li p {
+    font-size: 1.1rem;
+    margin-left: .8em;
+}
+
+.card .card__btn {
+    margin-top: 2em;
+}
+
+.card__btn button {
+    width: 100%;
+    padding: 1.2em 0;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 1.2rem;
 }

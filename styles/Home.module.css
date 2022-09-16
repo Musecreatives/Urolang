@@ -3,9 +3,9 @@
 }
 
 .header {
-  height: 170vh;
+  height: auto;
   /* background-image: radial-gradient(circle, #E5DCFD 10%, #FEEDFC 100%); */
-  background-image: linear-gradient(to bottom,#ECDFFE 50%, #FEEDFC 70%, transparent 80%);
+  background-image: linear-gradient(to bottom,#F4EDFE 50%, #FCEAFE 70%, transparent 80%);
   /* background-image: linear-gradient(to bottom, #E5DCFD 0%, #FEEFFE 40%, transparent 100%); */
   
 }
@@ -40,10 +40,9 @@
 }
 
 section.about__urolang {
-  height: auto;
-  position: absolute;
-  top: 42em;
-  left: 15%;
+  margin: 10em auto 12em auto;
+  width: 70%;
+
 }
 
 section .how__to__start {
@@ -122,11 +121,11 @@ section .how__to__start {
 }
 
 .about__lang .left__side {
-  width: 50%;
+  width: 55%;
 }
 
 .about__lang .right__side {
-  width: 50%;
+  width: 45%;
 }
 
 .about__lang .left__side h2 {
@@ -148,10 +147,72 @@ section .how__to__start {
   color: #fff;
 }
 
+.setBgColorGrad {
+  background-image: linear-gradient(to top,#FFF7FC 30%, #F8FAFF 45%, transparent 80%);
+
+}
+
 .pricing__plan__container {
   padding: 0 6.8em;
 }
 
 .pricing__plan__container .content {
   margin-top: 10em;
+}
+
+.footer__container {
+  margin-top: 27em;
+  position: relative;
+}
+
+.footer__container .newsletter__container {
+  position: absolute;
+  bottom: 38em;
+}
+
+.newsletter__container .content {
+  margin: var(--side-spacing-desktop);
+  background-color: #7D00C6;
+  border-radius: 10px;
+  padding: 5em 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletter__container .content form {
+  width: 60%;
+}
+
+.newsletter__container .content form label {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.newsletter__container form div {
+  margin-top: 1em;
+  display: flex;
+}
+
+.newsletter__container form div input:first-child {
+  height: 3.9em;
+  width: 45%;
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #F4F5F7;
+  padding: 1em;
+  font-size: 1rem;
+  color: #19191a;
+}
+
+.newsletter__container form div input:last-child {
+  background-color: black;
+  color: #ffffff;
+  font-size: 1rem;
+  height: 3.9em;
+  width: 20%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
