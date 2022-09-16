@@ -1,0 +1,109 @@
+.login_container {
+  margin: auto;
+  padding: 0 1em;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login_left_side {
+  width: 50%;
+}
+
+.login_right_side {
+    height: 660px;
+  width: 50%;
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-top-left-radius: 1.6em;
+  border-bottom-left-radius: 1.6em;
+  background-color: blue;
+}
+
+.login_right_side h1 {
+    color: #fff;
+}
+
+.urolang_logo {
+    margin-top: 5em;
+    margin-bottom: 1.2em;
+}
+
+ .login_left_side_content h2 {
+  margin-top: 0.3em;
+  font-size: 2.4rem;
+  font-weight: 700;
+  /* margin-bottom: 0.1em; */
+}
+
+.login_left_side_content p {
+  margin-top: .6em;
+  font-size: 1.4rem;
+  margin-bottom: .9em;
+}
+
+.form_group  {
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    font-size: 1rem;
+}
+
+.form_group input {
+  width: 545px;
+  height: 3em;
+  border-radius: .8em;
+  border: 2.5px solid #7D00C6;
+  padding-left: .6em;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.form_group ::placeholder {
+ padding-left: 2rem;
+ font-size: 1rem;
+}
+
+.forgot_password {
+  margin-left: 20em;
+  margin-bottom: 1em;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+ .btn1 {
+    width: 540px;
+    height: 3em;
+    border-radius: .6em;
+    background-color: #7D00C6;
+    margin-bottom: .9em;
+}
+
+.login_left_side .btn1 a {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.login_left_side .btn2 a {
+    color: #7D00C6;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+.dont_have_account {
+  margin-bottom: 3em;
+  font-size: .8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+ .btn2{
+    justify-content: center;
+    width: 450px;
+    height: 3em;
+    border-radius: .6em;
+    border: 2px solid #7D00C6;
+    margin-left: 3em; 
+    margin-bottom: 2em;
+}
