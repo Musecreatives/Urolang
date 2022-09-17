@@ -8,7 +8,7 @@ const GetStarted = () => {
 
     
     let socialsEngaged = []
-    const brandMediaAwareness = () => {
+    const brandMediaAwarenessBtn = () => {
         document.getElementById('learning__duration').style.display = 'block'
         document.getElementById('social__outreach__medium').style.display = 'none'
 
@@ -78,6 +78,8 @@ const GetStarted = () => {
     const selectedDurationBtn = () => {
         document.getElementById('learning__duration').style.display = 'none'
         document.getElementById('difficulty__level').style.display = 'block'
+        document.getElementById('social__outreach__medium').style.display = 'none'
+
     }
 
     const returnToHome = () => {
@@ -92,6 +94,8 @@ const GetStarted = () => {
     const submitDifficultyLevelBtn = () => {
         document.getElementById('difficulty__level').style.display = 'none'
         document.getElementById("select__language").style.display = 'block'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'none'
         
     }
 
@@ -122,7 +126,12 @@ const GetStarted = () => {
     }
     
     const selectedLangBtn = () => {
-        router.push('/quick-quiz')                
+        document.getElementById('difficulty__level').style.display = 'none'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('social__outreach__medium').style.display = 'none'
+
+        
+        router.push('/quick-quiz') 
     }
     
     return(
@@ -165,7 +174,7 @@ const GetStarted = () => {
                     </div>
                 </div>
 
-                <button onClick={brandMediaAwareness} className={styles.submit__medium__btn}>Proceed</button>
+                <button onClick={brandMediaAwarenessBtn} className={styles.submit__medium__btn}>Proceed</button>
             </div>
 
             {/* screen 2 */}

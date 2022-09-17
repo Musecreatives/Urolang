@@ -25,34 +25,37 @@ const QuickQuiz = () => {
 
                 :
 
-                <div className={`${styles['quest__container']}, ${styles['lang__q__c']}`}>
-                    <div className={styles.heading__2}>
-                        <FontAwesomeIcon icon={faXmark} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 20px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
-                    </div>
-
-                    <div className={styles.question}>
-                        <h3>Choose language</h3>
-
-                        <div className={styles.select__option__container}>
-                            <div className={styles.option__card}>
-                                <div id="hausa__lang" className={`${styles['option__rep__img']}`}></div>
-                                <p className={styles.option}>Hausa</p>
-                            </div>
-
-                            <div className={styles.option__card}>
-                                <div id="igbo__lang" className={`${styles['option__rep__img']}`}></div>
-                                <p className={styles.option}>Igbo</p>
-                            </div>
-
-                            <div className={styles.option__card}>
-                                <div id="yoruba__lang" className={`${styles['option__rep__img']}`}></div>
-                                <p className={styles.option}>Ede Yoruba</p>
-                            </div>
+                <div className={`${styles['question__wrapper']}`}>
+                    <div className={styles.quest__cont}>
+                        <div className={styles.heading}>
+                            <div></div>
+                            <h3 className={styles.question}>Choose hello more ques language</h3>
+                            <FontAwesomeIcon icon={faXmark} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 20px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer", textAlign: 'right'}}/>
                         </div>
 
-                        <div>
-                            <button className={`${styles['skip__btn']} ${styles['submit__selected__btn']}`}>Skip</button>
-                            <button className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
+                        <div className={styles.content}>
+
+                            <div className={styles.select__option__container}>
+                                <div className={styles.option__card}>
+                                    <div id="hausa__lang" className={`${styles['option__rep__img']}`}></div>
+                                    <p className={styles.option}>Hausa</p>
+                                </div>
+
+                                <div className={styles.option__card}>
+                                    <div id="igbo__lang" className={`${styles['option__rep__img']}`}></div>
+                                    <p className={styles.option}>Igbo</p>
+                                </div>
+
+                                <div className={styles.option__card}>
+                                    <div id="yoruba__lang" className={`${styles['option__rep__img']}`}></div>
+                                    <p className={styles.option}>Ede Yoruba</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button className={`${styles['skip__btn']} ${styles['submit__selected__btn']}`}>Skip</button>
+                                <button className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
+                            </div>
                         </div>
                     </div>
                 </div>
