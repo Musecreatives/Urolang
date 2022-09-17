@@ -1,7 +1,7 @@
 .question__wrapper {
     width: 97%;
     margin: auto;
-    padding-top: 6em;
+    padding-top: 5em;
 }
 
 .question__wrapper .quest__cont {
@@ -24,6 +24,38 @@ h3.question {
 }
 
 .quest__cont .content {
-    width: 80%;
+    width: 57%; 
     margin: auto;
+    padding-top: 4em;
 }
+
+.select__option__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select__option__container .option__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option__card .option__rep__img {
+    border: 3px solid #D9D9D9;
+    height: 17em;
+    width: 14em;
+    border-radius: 12px;
+    /* background-color: #D9D9D9; */
+}
+
+.option__card p {
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.option__rep__img img {}
+
+.quest__cont .content .option__card {}

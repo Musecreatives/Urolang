@@ -38,17 +38,17 @@ const QuickQuiz = () => {
                             <div className={styles.select__option__container}>
                                 <div className={styles.option__card}>
                                     <div id="hausa__lang" className={`${styles['option__rep__img']}`}></div>
-                                    <p className={styles.option}>Hausa</p>
+                                    <p className={styles.option}>Spoon</p>
                                 </div>
 
                                 <div className={styles.option__card}>
                                     <div id="igbo__lang" className={`${styles['option__rep__img']}`}></div>
-                                    <p className={styles.option}>Igbo</p>
+                                    <p className={styles.option}>Pot</p>
                                 </div>
 
                                 <div className={styles.option__card}>
                                     <div id="yoruba__lang" className={`${styles['option__rep__img']}`}></div>
-                                    <p className={styles.option}>Ede Yoruba</p>
+                                    <p className={styles.option}>Bag</p>
                                 </div>
                             </div>
 
