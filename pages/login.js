@@ -24,7 +24,7 @@ export default function Login ()  {
                     <input type="password" name="password" id="password" placeholder="Password" />
                 </div>
                 <div className={styles.forgot_password}>
-                    <Link href="#"><a>Forgot Password?</a></Link>
+                    <Link href="/forgotPassword"><a>Forgot Password?</a></Link>
                 </div>
             </form>
             <button className={styles.btn1}>
