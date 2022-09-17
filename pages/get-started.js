@@ -1,12 +1,14 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark, faArrowLeft, faL} from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/get.started.module.css'
 
 const GetStarted = () => {
+    const router = useRouter()
+
+    
     let socialsEngaged = []
-    const brandMediaAwareness = () => {
+    const brandMediaAwarenessBtn = () => {
         document.getElementById('learning__duration').style.display = 'block'
         document.getElementById('social__outreach__medium').style.display = 'none'
 
@@ -76,9 +78,10 @@ const GetStarted = () => {
     const selectedDurationBtn = () => {
         document.getElementById('learning__duration').style.display = 'none'
         document.getElementById('difficulty__level').style.display = 'block'
+        document.getElementById('social__outreach__medium').style.display = 'none'
+
     }
 
-    const router = useRouter()
     const returnToHome = () => {
             router.push('/')                
     }
@@ -91,6 +94,8 @@ const GetStarted = () => {
     const submitDifficultyLevelBtn = () => {
         document.getElementById('difficulty__level').style.display = 'none'
         document.getElementById("select__language").style.display = 'block'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'none'
         
     }
 
@@ -118,6 +123,15 @@ const GetStarted = () => {
         selectedLanguageStyle('none', 'none', '3px solid #7D00C6')
 
         selectedLanguage = 'EDE YORUBA'
+    }
+    
+    const selectedLangBtn = () => {
+        document.getElementById('difficulty__level').style.display = 'none'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('social__outreach__medium').style.display = 'none'
+
+        
+        router.push('/quick-quiz') 
     }
     
     return(
@@ -160,7 +174,7 @@ const GetStarted = () => {
                     </div>
                 </div>
 
-                <button onClick={brandMediaAwareness} className={styles.submit__medium__btn}>Proceed</button>
+                <button onClick={brandMediaAwarenessBtn} className={styles.submit__medium__btn}>Proceed</button>
             </div>
 
             {/* screen 2 */}
@@ -299,7 +313,7 @@ const GetStarted = () => {
 
                     <div>
                         <div className={styles.speaker}></div>
-                        <button onClick={selectedDurationBtn} className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
+                        <button onClick={selectedLangBtn} className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,33 @@
+{
+    "quiz":[
+        {
+            "quest": "Which one of these is \"a pot\"?",
+            "optA": "Spoon",
+            "optB": "Pot",
+            "optC": "Bag",
+            "imgA": "Which is a spoon",
+            "imgB": "Which is a spoon",
+            "imgC": "Which is a spoon"
+        },
+
+        {
+            "quest": "Which one of these is \"a pot\"?",
+            "optA": "Spoon",
+            "optB": "Pot",
+            "optC": "Bag",
+            "imgA": "Which is a spoon",
+            "imgB": "Which is a spoon",
+            "imgC": "Which is a spoon"
+        },
+
+        {
+            "quest": "Which one of these is \"a pot\"?",
+            "optA": "Spoon",
+            "optB": "Pot",
+            "optC": "Bag",
+            "imgA": "Which is a spoon",
+            "imgB": "Which is a spoon",
+            "imgC": "Which is a spoon"
+        }
+    ]
+}
