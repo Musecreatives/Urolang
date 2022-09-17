@@ -1,0 +1,260 @@
+.get__started {
+    height: auto;
+}
+
+.get__started h2 {
+    color: black;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.get__started .outreach__medium {
+    padding: 5em 1em 2em 2em;
+    width: 100%;
+
+}
+
+.outreach__medium .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outreach__medium .heading h2 {
+    margin-left: 19em;
+}
+
+.outreach__medium .mediums {
+    width: 60%;
+    margin: auto;
+    padding-top: 4em;
+}
+
+.mediums .m__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mediums .m__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.mediums .m__card {
+    border: 3px solid #D9D9D9;
+    height: 17em;
+    width: 14em;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em;
+}
+
+.m__card:hover {
+    background-color: #D8B3EE;
+    border: 3px solid #7D00C6;
+}
+
+.m__card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+.submit__medium__btn {
+    width: 60%;
+    margin: 3.3em auto 2em auto;
+    padding: 1.6em 0;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #7D00C6;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+.learning__duration {
+    display: none;
+    visibility: hidden;
+}
+
+.quest__container {
+    padding: 5em 1em 2em 2em;
+    height: 100vh;
+    display: block;
+}
+
+.quest__container .heading__2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__container {
+    width: 40%;
+    margin: auto;
+}
+
+.content__container h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+}
+
+.content__container .goals {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.goals .question__card {
+    width: 87%;
+    position: relative;
+    padding: 0 2em;
+    margin: 1em auto 0 auto;
+    padding-top: 1.5em;
+    border: 2.4px solid #7D00C6;
+    height: 5em;
+    border-radius: 20px;
+    margin: 1em auto 0 auto;
+}
+
+.question__card__select {
+    background-color: #D8B3EE;
+}
+
+.question__card .content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23.6em;
+    position: static;
+    
+
+}
+
+.question__card:hover {
+    width: 100%;
+    padding-left: 4.1em;
+    transition: .2s;
+    background-color: #D8B3EE;
+}
+
+.question__card:hover p {
+    color: #7D00C6;
+}
+
+
+.question__card p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+}
+
+.question__card .duration {
+    display: flex;
+    align-items: center;
+}
+
+.question__card .duration .custom__radio {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.4px solid #7D00C6;
+    border-radius: 50%;
+}
+
+.custom__radio .radio__btn {
+    width: 18px !important;
+    height: 18px !important;
+    background: #7D00C6 !important;
+    border-radius: 50%;
+    display: none;
+}
+
+/* .radio__visibility {
+    display: none;
+    visibility: hidden;
+} */
+
+.question__card:hover .custom__radio {
+    background-color: white;
+}
+
+.duration p {
+    margin-left: 1em;
+}
+
+.submit__btn {
+    width: 87%;
+    margin: 3.3em auto 2em auto;
+    padding: 1.6em 0;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #7D00C6;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+/* selection language */
+.lang__q__c {
+    padding-top: 5em;
+}
+
+.lang__q__c .content__container {
+    width: 57%;
+}
+
+.lang__q__c .heading__2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+.select__languages__container {
+    height: 19em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 7em;
+}
+
+.select__languages__container .l__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.l__card img {
+    
+}
+
+.l__card .l__descr__img__container {
+    border: 3px solid #D9D9D9;
+    height: 17em;
+    width: 14em;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+}
+
+.l__card .l__descr__img__container:hover {
+    height: 19em;
+    transition: .2s;
+}
+
+.l__card p {
+    margin-top: 1.5em;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.submit__selected__btn {
+    width: 60%;
+}
