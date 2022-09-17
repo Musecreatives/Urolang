@@ -1,10 +1,12 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark, faArrowLeft, faL} from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/get.started.module.css'
 
 const GetStarted = () => {
+    const router = useRouter()
+
+    
     let socialsEngaged = []
     const brandMediaAwareness = () => {
         document.getElementById('learning__duration').style.display = 'block'
@@ -78,7 +80,6 @@ const GetStarted = () => {
         document.getElementById('difficulty__level').style.display = 'block'
     }
 
-    const router = useRouter()
     const returnToHome = () => {
             router.push('/')                
     }
@@ -118,6 +119,10 @@ const GetStarted = () => {
         selectedLanguageStyle('none', 'none', '3px solid #7D00C6')
 
         selectedLanguage = 'EDE YORUBA'
+    }
+    
+    const selectedLangBtn = () => {
+        router.push('/quick-quiz')                
     }
     
     return(
@@ -299,7 +304,7 @@ const GetStarted = () => {
 
                     <div>
                         <div className={styles.speaker}></div>
-                        <button onClick={selectedDurationBtn} className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
+                        <button onClick={selectedLangBtn} className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
                     </div>
                 </div>
             </div>

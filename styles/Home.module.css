@@ -4,9 +4,7 @@
 
 .header {
   height: auto;
-  /* background-image: radial-gradient(circle, #E5DCFD 10%, #FEEDFC 100%); */
   background-image: linear-gradient(to bottom,#F4EDFE 50%, #FCEAFE 70%, transparent 80%);
-  /* background-image: linear-gradient(to bottom, #E5DCFD 0%, #FEEFFE 40%, transparent 100%); */
   
 }
 
