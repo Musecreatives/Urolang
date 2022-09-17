@@ -52,7 +52,7 @@ const QuickQuiz = () => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className={styles.dlb__btn}>
                                 <button className={`${styles['skip__btn']} ${styles['submit__selected__btn']}`}>Skip</button>
                                 <button className={`${styles['submit__btn']} ${styles['submit__selected__btn']}`}>Proceed</button>
                             </div>

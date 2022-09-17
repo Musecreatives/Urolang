@@ -58,4 +58,28 @@ h3.question {
 
 .option__rep__img img {}
 
-.quest__cont .content .option__card {}
+.quest__cont .dlb__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8em;
+    margin-bottom: 3em;
+}
+
+.dlb__btn .submit__selected__btn {
+    height: 4em;
+    width: 13em;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+.skip__btn {
+    background-color: transparent;
+    border: 2px solid #7D00C6;
+    color: #7D00C6;
+}
+
+.submit__btn {
+    background-color: #7D00C6;
+    color: white;
+}
