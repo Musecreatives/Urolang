@@ -5,6 +5,7 @@ import Loading from '../components/loading'
 import styles from '../styles/quick.quiz.module.css'
 
 const QuickQuiz = () => {
+    let selectedAnswer;
     let currentQuestion = 0;
     
     const manualLoadTime = 10;
@@ -34,7 +35,16 @@ const QuickQuiz = () => {
         document.getElementById('optC').textContent = quiz[currentQuestion].optC
     }
 
-    let selectedAnswer;
+    const styleSelectedOption = (optA, optB, optC, a, b, c) => {
+        document.getElementById(optA).style.border = a
+        document.getElementById(optB).style.border = b
+        document.getElementById(optC).style.border = c
+    }
+    
+    const clickOptionA = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #7D00C6", "3px solid #D9D9D9", "3px solid #D9D9D9")
+    const clickOptionB = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #7D00C6", "3px solid #D9D9D9")
+    const clickOptionC = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #D9D9D9", "3px solid #7D00C6")
+
     
     const submitQuestion = () => {}
     
@@ -59,17 +69,17 @@ const QuickQuiz = () => {
 
                             <div className={styles.select__option__container}>
                                 <div className={styles.option__card}>
-                                    <div className={`${styles['option__rep__img']}`} value={quiz[currentQuestion].optA}></div>
+                                    <div id="optionA" onClick={clickOptionA} className={`${styles['option__rep__img']}`} value={quiz[currentQuestion].optA}></div>
                                     <p id="optA" className={styles.option}>{quiz[currentQuestion].optA}</p>
                                 </div>
 
                                 <div className={styles.option__card}>
-                                    <div className={`${styles['option__rep__img']}`}></div>
+                                <div id="optionB" onClick={clickOptionB} className={`${styles['option__rep__img']}`} value={quiz[currentQuestion].optB}></div>
                                     <p id="optB" className={styles.option}>{quiz[currentQuestion].optB}</p>
                                 </div>
 
                                 <div className={styles.option__card}>
-                                    <div className={`${styles['option__rep__img']}`}></div>
+                                <div id="optionC" onClick={clickOptionC} className={`${styles['option__rep__img']}`} value={quiz[currentQuestion].optC}></div>
                                     <p id="optC" className={styles.option}>{quiz[currentQuestion].optC}</p>
                                 </div>
                             </div>
