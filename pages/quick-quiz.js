@@ -67,7 +67,7 @@ const QuickQuiz = () => {
         else if(
             selectedAnswer === quiz[currentQuestion].correct
         ) {
-            setPopup(<Popup header="Correct answer" paragraph="You can try again" bgcolor="#23B720" icon="faCircleCheck" visibility="block" />)
+            setPopup(<Popup header="Correct answer" paragraph="You are a genius" bgcolor="#23B720" icon="faCircleCheck" visibility="block" />)
         }
         else {
             setPopup(<Popup header="Wrong answer" paragraph="You'll do better next time" bgcolor="#DA0000" icon="faCircleCheck" visibility="block" />)
