@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faXmark, faArrowLeft, faL} from '@fortawesome/free-solid-svg-icons'
+import {faXmark, faCircleCheck} from '@fortawesome/free-solid-svg-icons'
 import Loading from '../components/loading'
 import styles from '../styles/quick.quiz.module.css'
+import Popup from '../components/popup'
 
 const QuickQuiz = () => {
-    let selectedAnswer;
+    let selectedAnswer = false
     let currentQuestion = 0;
     
     const manualLoadTime = 10;
-    const [loading, setLoading] = useState(false)
     const [quiz, setQuiz] = useState(null)
+
+    const popupComponent = <Popup />
+    const [popup, setPopup] = useState(null)
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/Musecreatives/Urolang/quizEasy')
@@ -53,7 +56,23 @@ const QuickQuiz = () => {
     const clickOptionC = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #D9D9D9", "3px solid #7D00C6", quiz[currentQuestion].optC)
 
     
-    const submitQuestion = () => {}
+    const submitQuestion = () => {
+        console.log(quiz[currentQuestion])
+        // if correct do this to popup
+        // else wrong msg popup
+
+        if(selectedAnswer === false) {
+            alert('please answer the question')
+        }
+        else if(
+            selectedAnswer === quiz[currentQuestion].correct
+        ) {
+            setPopup(<Popup header="Correct answer" paragraph="You can try again" bgcolor="#23B720" icon="faCircleCheck" visibility="block" />)
+        }
+        else {
+            setPopup(<Popup header="Wrong answer" paragraph="You'll do better next time" bgcolor="#DA0000" icon="faCircleCheck" visibility="block" />)
+        }
+    }
     
     return(
         <div className={styles.quick__quiz__container}>
@@ -65,7 +84,7 @@ const QuickQuiz = () => {
 
                 :
                 <div key={quiz[currentQuestion].id}>
-                    <div className={styles.quest__cont} style={{padding: "padding: 5em 1em 2em 2em;"}}>
+                    <div className={styles.quest__cont}>
                         <div className={styles.heading}>
                             <div></div>
                             <h3 id="question" className={styles.question}>{quiz[currentQuestion].quest}</h3>
@@ -98,8 +117,9 @@ const QuickQuiz = () => {
                         </div>
                     </div>
                 </div>
-
             }
+
+            {popup}
         </div>
     )
 }
