@@ -1,12 +1,13 @@
-.question__wrapper {
+/* .question__wrapper {
     width: 97%;
     margin: auto;
     padding-top: 8em;
-}
+} */
 
-.question__wrapper .quest__cont {
+.quest__cont {
     display: flex;
     flex-direction: column;
+    margin-top: 5em !important;
 }
 
 .quest__cont .heading {

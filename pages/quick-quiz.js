@@ -65,7 +65,7 @@ const QuickQuiz = () => {
 
                 :
                 <div key={quiz[currentQuestion].id}>
-                    <div className={styles.quest__cont}>
+                    <div className={styles.quest__cont} style={{padding: "padding: 5em 1em 2em 2em;"}}>
                         <div className={styles.heading}>
                             <div></div>
                             <h3 id="question" className={styles.question}>{quiz[currentQuestion].quest}</h3>
