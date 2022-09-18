@@ -5,7 +5,7 @@
             "quest": "Which one of these is \"a pot\"?",
             "optA": "Spoon",
             "optB": "Pot",
-            "optC": "Bag",
+            "optC": "Yam",
             "imgA": "Which is a spoon",
             "imgB": "Which is a spoon",
             "imgC": "Which is a spoon"
@@ -14,9 +14,9 @@
         {
             "id": "2Axqqq2q",
             "quest": "Which one of these is \"a spoon\"?",
-            "optA": "Spoon",
+            "optA": "Rice",
             "optB": "Pot",
-            "optC": "Bag",
+            "optC": "Shoe",
             "imgA": "Which is a spoon",
             "imgB": "Which is a spoon",
             "imgC": "Which is a spoon"

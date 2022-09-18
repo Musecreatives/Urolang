@@ -33,17 +33,24 @@ const QuickQuiz = () => {
         document.getElementById('optA').textContent = quiz[currentQuestion].optA
         document.getElementById('optB').textContent = quiz[currentQuestion].optB
         document.getElementById('optC').textContent = quiz[currentQuestion].optC
+
+        document.getElementById("optionA").style.border = "3px solid #D9D9D9"
+        document.getElementById("optionB").style.border = "3px solid #D9D9D9"
+        document.getElementById("optionC").style.border = "3px solid #D9D9D9"
     }
 
-    const styleSelectedOption = (optA, optB, optC, a, b, c) => {
+    const styleSelectedOption = (optA, optB, optC, a, b, c, val) => {
         document.getElementById(optA).style.border = a
         document.getElementById(optB).style.border = b
         document.getElementById(optC).style.border = c
+
+        selectedAnswer = val
+        console.log(selectedAnswer)
     }
     
-    const clickOptionA = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #7D00C6", "3px solid #D9D9D9", "3px solid #D9D9D9")
-    const clickOptionB = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #7D00C6", "3px solid #D9D9D9")
-    const clickOptionC = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #D9D9D9", "3px solid #7D00C6")
+    const clickOptionA = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #7D00C6", "3px solid #D9D9D9", "3px solid #D9D9D9", quiz[currentQuestion].optA)
+    const clickOptionB = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #7D00C6", "3px solid #D9D9D9", quiz[currentQuestion].optB)
+    const clickOptionC = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #D9D9D9", "3px solid #7D00C6", quiz[currentQuestion].optC)
 
     
     const submitQuestion = () => {}
