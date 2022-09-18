@@ -3,6 +3,9 @@ import {faCircleCheck, faCircleXmark} from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/popup.module.css'
 
 const Popup = (props) => {
+    let bg = props.bgcolor
+    console.log(bg)
+    
     console.log(props.header)
     const closePopupOverlay = () => {
         document.getElementById('popup__body').style.display = 'none'
@@ -12,12 +15,13 @@ const Popup = (props) => {
         document.getElementById('popup__body').style.display = 'none'
     }
     
+    
     return(
         <div id='popup__body' className={styles.popup__container}>
             <div onClick={closePopupOverlay} className={styles.bg__overlay}>
             </div>
 
-            <div className={styles.popup__msg__container} style={{background: "#23B720"}}>
+            <div className={styles.popup__msg__container} style={{background: bg}}>
                 <div className={styles.close__popup}>
                     <FontAwesomeIcon onClick={closePopupX} icon={faCircleXmark} style={{fontSize:"1.7rem" ,color: "#fff"}} />
                 </div>
