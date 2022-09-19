@@ -4,15 +4,20 @@
     padding-top: 8em;
 } */
 
+.quick__quiz__container {
+    position: relative;
+    height: 112vh;
+}
+
 .quest__cont {
     display: flex;
     flex-direction: column;
-    margin-top: 5em !important;
 }
 
 .quest__cont .heading {
     display: flex;
     justify-content: space-between;
+    padding-top: 5em !important;
 }
 
 

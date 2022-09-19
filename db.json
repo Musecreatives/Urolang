@@ -8,7 +8,8 @@
             "optC": "Yam",
             "imgA": "Which is a spoon",
             "imgB": "Which is a spoon",
-            "imgC": "Which is a spoon"
+            "imgC": "Which is a spoon",
+            "correct": "Pot"
         },
 
         {
@@ -19,7 +20,8 @@
             "optC": "Shoe",
             "imgA": "Which is a spoon",
             "imgB": "Which is a spoon",
-            "imgC": "Which is a spoon"
+            "imgC": "Which is a spoon",
+            "correct": "Spoon"
         },
 
         {
@@ -30,7 +32,8 @@
             "optC": "Bag",
             "imgA": "Which is a spoon",
             "imgB": "Which is a spoon",
-            "imgC": "Which is a spoon"
+            "imgC": "Which is a spoon",
+            "correct": "Bag"
         }
     ]
 }
