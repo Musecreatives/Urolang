@@ -201,6 +201,12 @@ const GetStarted = () => {
     const levelCancelBtn = () => returnToHome()
 
     // select difficulty
+    const styleSelectedParaLevel = (elem1,  elem2, elem3, color1, color2, color3) => {
+        document.getElementById(elem1).style.color = color1
+        document.getElementById(elem2).style.color = color2
+        document.getElementById(elem3).style.color = color3
+    }
+
     const difficultyLevelRadio = (a, b, c) => {
         let easyDuration = document.getElementById('radio__beginner')
         easyDuration.style.display = a
@@ -208,6 +214,16 @@ const GetStarted = () => {
         regualarDuration.style.display = b
         let committedDuration = document.getElementById('radio__expert')
         committedDuration.style.display = c
+
+        if(a === 'block') {
+            styleSelectedParaLevel('detx1', 'drtx1', 'dctx1', '#7D00C6', '#000', '#000' )
+        }
+        else if(b === 'block') {
+            styleSelectedParaLevel('detx1', 'drtx1', 'dctx1', '#000', '#7D00C6', '#000' )
+        }
+        else {
+            styleSelectedParaLevel('detx1', 'drtx1', 'dctx1', '#000', '#000', '#7D00C6' )
+        }
 
     }
     
