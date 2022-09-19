@@ -172,6 +172,14 @@ const GetStarted = () => {
         selectedduration = 'Committed'
     }
 
+    const backToSocialMediumBtn = () => {
+        document.getElementById('social__outreach__medium').style.display = 'block'
+        document.getElementById('difficulty__level').style.display = 'none'
+        document.getElementById("select__language").style.display = 'none'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'none'
+    }
+
     const selectedDurationBtn = () => {
         if(selectedduration === null) {
             alert('Please select an option to  proceed')
@@ -282,7 +290,7 @@ const GetStarted = () => {
             {/* screen 2 */}
             <div id="learning__duration" className={`${styles['quest__container']}`} style={{display: 'none'}}>
                 <div className={styles.heading__2}>
-                    <FontAwesomeIcon icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
+                    <FontAwesomeIcon onClick={backToSocialMediumBtn} icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                     <FontAwesomeIcon onClick={lDurationCancelBtn} icon={faXmark} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 20px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                 </div>
 
