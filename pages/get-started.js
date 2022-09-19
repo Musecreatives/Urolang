@@ -201,18 +201,32 @@ const GetStarted = () => {
     const levelCancelBtn = () => returnToHome()
 
     // select difficulty
+    const difficultyLevelRadio = (a, b, c) => {
+        let easyDuration = document.getElementById('radio__beginner')
+        easyDuration.style.display = a
+        let regualarDuration = document.getElementById('radio__intermediate')
+        regualarDuration.style.display = b
+        let committedDuration = document.getElementById('radio__expert')
+        committedDuration.style.display = c
+
+    }
+    
+    
     const selectBeginner = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', '#D8B3EE', 'transparent', 'transparent')
+        difficultyLevelRadio("block", "none", "none")
     }
 
     const selectIntermediate = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', '#D8B3EE', 'transparent')
+        difficultyLevelRadio("none", "block", "none")
     }
 
     const selectExpert = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', 'transparent', '#D8B3EE')
+        difficultyLevelRadio("none", "none", "block")
     }
-    
+
     let difficultyLevel;
     const submitDifficultyLevelBtn = () => {
         document.getElementById('difficulty__level').style.display = 'none'
@@ -375,7 +389,7 @@ const GetStarted = () => {
                                     <div className={styles.custom__radio}>
                                         <div id="radio__beginner" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="etx1">Beginner</p>
+                                    <p id="detx1">Beginner</p>
                                 </div>
                             </div>
                         </div>
@@ -386,7 +400,7 @@ const GetStarted = () => {
                                     <div className={styles.custom__radio}>
                                         <div id="radio__intermediate" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="rtx1">Intermediate</p>
+                                    <p id="drtx1">Intermediate</p>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +411,7 @@ const GetStarted = () => {
                                     <div className={styles.custom__radio}>
                                         <div id="radio__expert" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="ctx1">Expert</p>
+                                    <p id="dctx1">Expert</p>
                                 </div>
                             </div>
                         </div>
