@@ -5,12 +5,6 @@ import styles from '../styles/popup.module.css'
 const Popup = (props) => {
     let bg = props.bgcolor
     let icon = props.icon
-    let visibility2 = props.visibility
-    console.log(visibility2)
-
-    console.log(icon)
-
-    console.log(bg)
     
     const closePopupOverlay = () => {
         document.getElementById('popup__body').style.display = 'none'
@@ -24,8 +18,7 @@ const Popup = (props) => {
     
     
     return(
-        <div id='popup__body' className={styles.popup__container} style={{display: visibility2}}>
-            props.visibility('none')
+        <div id='popup__body' className={styles.popup__container}>
             <div onClick={closePopupOverlay} className={styles.bg__overlay}>
             </div>
 
