@@ -4,10 +4,42 @@ import {faXmark, faArrowLeft, faL} from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/get.started.module.css'
 
 const GetStarted = () => {
+    const onActive = "2.4px solid #7D00C6"
+    const onDeactive = "3px solid #D9D9D9"
+
     const router = useRouter()
 
-    
     let socialsEngaged = []
+    let wrdOfMouthClicked = false
+    let fbClicked = false
+    let instaClicked = false
+    let blogClicked = false
+    let gsClicked = false
+    let othersClicked = false
+
+    const selectedMediumStyle = (m1, style1, style2, social) => {
+        if(wrdOfMouthClicked === false || fbClicked ||fbClicked || instaClicked || blogClicked || gsClicked  || othersClicked) {
+            document.getElementById(m1).style.border = style1
+        }
+        else if(wrdOfMouthClicked === false || fbClicked ||fbClicked || instaClicked || blogClicked || gsClicked  || othersClicked) {
+            document.getElementById(m1).style.border = style2
+        }
+
+        socialsEngaged.push(social)
+        console.log(socialsEngaged)
+        
+        if(socialsEngaged.includes(social)) {
+            return
+        }
+    }
+
+    const wrdOfMouthMedium = () => selectedMediumStyle("m__wrd", onActive, onDeactive, "Word of mouth")
+    const facebookMedium = () => selectedMediumStyle("m__fb", onActive, onDeactive, "Facebook")
+    const instagramMedium = () => selectedMediumStyle("m__instagram", onActive, onDeactive, "Instagram")
+    const blogMedium = () => selectedMediumStyle("m__blog", onActive, onDeactive, "Blog")
+    const googleSearchMedium = () => selectedMediumStyle("m__gs", onActive, onDeactive, "Google search")
+    const otherMedium = () => selectedMediumStyle("m__others", onActive, onDeactive, "Others")
+    
     const brandMediaAwarenessBtn = () => {
         document.getElementById('learning__duration').style.display = 'block'
         document.getElementById('social__outreach__medium').style.display = 'none'
@@ -145,29 +177,29 @@ const GetStarted = () => {
 
                 <div className={styles.mediums}>
                     <div className={styles.m__top}>
-                        <div className={styles.m__card}>
+                        <div id='m__wrd' onClick={wrdOfMouthMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Word of mouth</p>
                         </div>
-                        <div className={styles.m__card}>
+                        <div id='m__fb' onClick={facebookMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Facebook</p>
                         </div>
-                        <div className={styles.m__card}>
+                        <div id='m__instagram' onClick={instagramMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Instagram</p>
                         </div>
                     </div>
                     <div className={styles.m__bottom}>
-                        <div className={styles.m__card}>
+                        <div id='m__blog' onClick={blogMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Blog</p>
                         </div>
-                        <div className={styles.m__card}>
+                        <div id='m__gs' onClick={googleSearchMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Google search</p>
                         </div>
-                        <div className={styles.m__card}>
+                        <div id='m__others' onClick={otherMedium} className={styles.m__card}>
                             <div className={styles.m__icon}></div>
                             <p>Others</p>
                         </div>

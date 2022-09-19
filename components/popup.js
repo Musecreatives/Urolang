@@ -4,6 +4,11 @@ import styles from '../styles/popup.module.css'
 
 const Popup = (props) => {
     let bg = props.bgcolor
+    let icon = props.icon
+    let visibility = props.visibility
+
+    console.log(icon)
+
     console.log(bg)
     
     console.log(props.header)
@@ -17,7 +22,7 @@ const Popup = (props) => {
     
     
     return(
-        <div id='popup__body' className={styles.popup__container}>
+        <div id='popup__body' className={styles.popup__container} style={{display: visibility}}>
             <div onClick={closePopupOverlay} className={styles.bg__overlay}>
             </div>
 
@@ -28,7 +33,7 @@ const Popup = (props) => {
 
                 <div className={styles.msg__container}>
                     <div className={styles.msg__icon}>
-                        <FontAwesomeIcon icon={faCircleCheck} style={{fontSize: '5.5rem', color: "#fff"}} />
+                        <FontAwesomeIcon icon={icon} style={{fontSize: '5.5rem', color: "#fff"}} />
                     </div>
                     <h3>{props.header}</h3>
                     <p>{props.paragraph}</p>
