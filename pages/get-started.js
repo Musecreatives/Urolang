@@ -201,6 +201,8 @@ const GetStarted = () => {
     const levelCancelBtn = () => returnToHome()
 
     // select difficulty
+    let difficultyLevel = null
+    
     const styleSelectedParaLevel = (elem1,  elem2, elem3, color1, color2, color3) => {
         document.getElementById(elem1).style.color = color1
         document.getElementById(elem2).style.color = color2
@@ -231,20 +233,30 @@ const GetStarted = () => {
     const selectBeginner = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', '#D8B3EE', 'transparent', 'transparent')
         difficultyLevelRadio("block", "none", "none")
+
+        difficultyLevel = "BEGINNER"
     }
 
     const selectIntermediate = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', '#D8B3EE', 'transparent')
         difficultyLevelRadio("none", "block", "none")
+
+        difficultyLevel = "INTERMEDIATE"
     }
 
     const selectExpert = () => {
         styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', 'transparent', '#D8B3EE')
         difficultyLevelRadio("none", "none", "block")
+
+        difficultyLevel = "EXPERT"
     }
 
-    let difficultyLevel;
     const submitDifficultyLevelBtn = () => {
+        if(difficultyLevel === null) {
+            alert("Please select an option to proceed")
+            return
+        }
+        
         document.getElementById('difficulty__level').style.display = 'none'
         document.getElementById("select__language").style.display = 'block'
         document.getElementById('learning__duration').style.display = 'none'
