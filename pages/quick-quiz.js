@@ -55,6 +55,11 @@ const QuickQuiz = () => {
     const clickOptionB = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #7D00C6", "3px solid #D9D9D9", quiz[currentQuestion].optB)
     const clickOptionC = () => styleSelectedOption("optionA", "optionB", "optionC" ,"3px solid #D9D9D9", "3px solid #D9D9D9", "3px solid #7D00C6", quiz[currentQuestion].optC)
 
+    const hidePopup = (display) => {
+        if(display === 'none') {
+            setPopup(null)
+        }
+    }
     
     const submitQuestion = () => {
         console.log(quiz[currentQuestion])
@@ -67,10 +72,10 @@ const QuickQuiz = () => {
         else if(
             selectedAnswer === quiz[currentQuestion].correct
         ) {
-            setPopup(<Popup header="Correct answer" paragraph="You are a genius" bgcolor="#23B720" icon="faCircleCheck" visibility="block" />)
+            setPopup(<Popup header="Correct answer" paragraph="You are a genius" bgcolor="#23B720" icon="faCircleCheck" visibility={hidePopup} />)
         }
         else {
-            setPopup(<Popup header="Wrong answer" paragraph="You'll do better next time" bgcolor="#DA0000" icon="faCircleCheck" visibility="block" />)
+            setPopup(<Popup header="Wrong answer" paragraph="You'll do better next time" bgcolor="#DA0000" icon="faCircleCheck" visibility={hidePopup} />)
         }
     }
     
