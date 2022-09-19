@@ -12,15 +12,14 @@ const Popup = (props) => {
 
     console.log(bg)
     
-    console.log(props.header)
     const closePopupOverlay = () => {
         document.getElementById('popup__body').style.display = 'none'
-        props.visibility('none')
+        props.appear('none')
     }
 
     const closePopupX = () => {
         document.getElementById('popup__body').style.display = 'none'
-        props.visibility('none')
+        props.appear('none')
     }
     
     
