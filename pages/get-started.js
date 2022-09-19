@@ -111,7 +111,7 @@ const GetStarted = () => {
 
     }
 
-    let selectedduration;
+    let selectedduration = null;
 
     const styleSelectedBtn = (easy, reg, committed) => {
         document.getElementById("goal__duration__easy").style.background = easy
@@ -173,6 +173,11 @@ const GetStarted = () => {
     }
 
     const selectedDurationBtn = () => {
+        if(selectedduration === null) {
+            alert('Please select an option to  proceed')
+            return
+        }
+        
         document.getElementById('learning__duration').style.display = 'none'
         document.getElementById('difficulty__level').style.display = 'block'
         document.getElementById('social__outreach__medium').style.display = 'none'
