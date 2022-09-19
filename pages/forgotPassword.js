@@ -105,18 +105,3 @@ const ForgotPassword = () => {
 
 export default ForgotPassword;
 
-{
-  /* <div className={styles.container}>
-            <h1>Forgot Password</h1>
-            <p>Don't worry! It happens</p>
-            <p>Please enter the email address associated with your account.</p>
-            <Form className={styles.form_group}>
-              <input type="email" placeholder="Email" />
-            </Form>
-            <button className={styles.btn1}>
-              <Link href="#">
-                <a>Submit</a>
-              </Link>
-            </button>
-          </div> */
-}
