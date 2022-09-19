@@ -264,8 +264,16 @@ const GetStarted = () => {
         
     }
 
+    const backToDuration = () => {
+        document.getElementById('social__outreach__medium').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'none'
+        document.getElementById("select__language").style.display = 'none'
+        document.getElementById('learning__duration').style.display = 'block'
+        document.getElementById('difficulty__level').style.display = 'none'
+    }
+
     // select language
-    let selectedLanguage;
+    let selectedLanguage = null;
     const selectedLanguageStyle = (lang1, lang2, lang3) => {
         document.getElementById("hausa__lang").style.border = lang1
         document.getElementById("igbo__lang").style.border = lang2
@@ -291,12 +299,25 @@ const GetStarted = () => {
     }
     
     const selectedLangBtn = () => {
+        if(selectedLanguage === null) {
+            alert("Please select a language to continue")
+            return
+        }
+
         document.getElementById('difficulty__level').style.display = 'none'
         document.getElementById('learning__duration').style.display = 'none'
         document.getElementById('social__outreach__medium').style.display = 'none'
 
         
         router.push('/quick-quiz') 
+    }
+
+    const backDifficultyLevel = () => {
+        document.getElementById('social__outreach__medium').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'none'
+        document.getElementById("select__language").style.display = 'none'
+        document.getElementById('learning__duration').style.display = 'none'
+        document.getElementById('difficulty__level').style.display = 'block'
     }
     
     return(
@@ -403,7 +424,7 @@ const GetStarted = () => {
             {/* screen 3 */}
             <div id="difficulty__level" className={styles.quest__container} style={{display: 'none'}}>
                 <div className={styles.heading__2}>
-                    <FontAwesomeIcon icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
+                    <FontAwesomeIcon onClick={backToDuration} icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                     <FontAwesomeIcon onClick={levelCancelBtn} icon={faXmark} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 20px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                 </div>
 
@@ -452,7 +473,7 @@ const GetStarted = () => {
             {/* screen 3 */}
             <div id="select__language" className={`${styles['quest__container']}, ${styles['lang__q__c']}`} style={{display: 'none'}}>
                 <div className={styles.heading__2}>
-                    <FontAwesomeIcon icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
+                    <FontAwesomeIcon onClick={backDifficultyLevel} icon={faArrowLeft} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 16px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                     <FontAwesomeIcon onClick={lDurationCancelBtn} icon={faXmark} style={{backgroundColor: "#D9D9D9", color: "#9A9A9A", padding: "15px 20px", fontSize: '1.9rem', borderRadius: "50%", cursor: "pointer"}}/>
                 </div>
 
