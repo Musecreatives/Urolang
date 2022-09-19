@@ -113,10 +113,10 @@ const GetStarted = () => {
 
     let selectedduration = null;
 
-    const styleSelectedBtn = (easy, reg, committed) => {
-        document.getElementById("goal__duration__easy").style.background = easy
-        document.getElementById("goal__duration__regular").style.background = reg
-        document.getElementById("goal__duration__committed").style.background = committed
+    const styleSelectedBtn = (btn1, btn2, btn3, style1, style2, style3) => {
+        document.getElementById(btn1).style.background = style1
+        document.getElementById(btn2).style.background = style2
+        document.getElementById(btn3).style.background = style3
 
     }
 
@@ -139,18 +139,19 @@ const GetStarted = () => {
         committedDuration.style.display = c
         
         if(a === 'block') {
-            styleSelectedBtn('#D8B3EE', 'transparent', 'transparent')
+            styleSelectedBtn('goal__duration__easy', 'goal__duration__regular', 'goal__duration__committed', '#D8B3EE', 'transparent', 'transparent')
             styleSelectedPara('etx1', 'etx2', 'rtx1', 'rtx2', 'ctx1', 'ctx2','#7D00C6', '#000', '#000' )
         }
         else if(b === 'block') {
-            styleSelectedBtn('transparent', '#D8B3EE', 'transparent')
+            styleSelectedBtn('goal__duration__easy', 'goal__duration__regular', 'goal__duration__committed', 'transparent', '#D8B3EE', 'transparent')
             styleSelectedPara('etx1', 'etx2', 'rtx1', 'rtx2', 'ctx1', 'ctx2','#000', '#7D00C6', '#000' )
         }
         else {
-            styleSelectedBtn('transparent', 'transparent', '#D8B3EE')
+            styleSelectedBtn('goal__duration__easy', 'goal__duration__regular', 'goal__duration__committed', 'transparent', 'transparent', '#D8B3EE')
             styleSelectedPara('etx1', 'etx2', 'rtx1', 'rtx2', 'ctx1', 'ctx2','#000', '#000', '#7D00C6' )
         }
     }
+
     const selectEasy = () => {
         durationRadio()
         durationRadio('block', 'none', 'none')
@@ -200,6 +201,18 @@ const GetStarted = () => {
     const levelCancelBtn = () => returnToHome()
 
     // select difficulty
+    const selectBeginner = () => {
+        styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', '#D8B3EE', 'transparent', 'transparent')
+    }
+
+    const selectIntermediate = () => {
+        styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', '#D8B3EE', 'transparent')
+    }
+
+    const selectExpert = () => {
+        styleSelectedBtn('beginner__level', 'intermediate__level', 'expert__level', 'transparent', 'transparent', '#D8B3EE')
+    }
+    
     let difficultyLevel;
     const submitDifficultyLevelBtn = () => {
         document.getElementById('difficulty__level').style.display = 'none'
@@ -356,35 +369,35 @@ const GetStarted = () => {
                     <h3>Choose difficulty level</h3>
 
                     <div className={styles.goals}>
-                        <div id="goal__duration__easy" onClick={selectEasy} className={styles.question__card}>
+                        <div id="beginner__level" onClick={selectBeginner} className={styles.question__card}>
                             <div id="g__d__content" className={`${styles["content"]}`}>
                                 <div className={styles.duration}>
                                     <div className={styles.custom__radio}>
-                                        <div id="radio__duration__easy" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
+                                        <div id="radio__beginner" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="etx1">Easy</p>
+                                    <p id="etx1">Beginner</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="goal__duration__regular" onClick={selectRegular} className={styles.question__card}>
+                        <div id="intermediate__level" onClick={selectIntermediate} className={styles.question__card}>
                             <div className={styles.content}>
                                 <div className={styles.duration}>
                                     <div className={styles.custom__radio}>
-                                        <div id="radio__duration__regular" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
+                                        <div id="radio__intermediate" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="rtx1">Regular</p>
+                                    <p id="rtx1">Intermediate</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="goal__duration__committed" onClick={selectCommitted} className={styles.question__card}>
+                        <div id="expert__level" onClick={selectExpert} className={styles.question__card}>
                             <div className={styles.content}>
                                 <div className={styles.duration}>
                                     <div className={styles.custom__radio}>
-                                        <div id="radio__duration__committed" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
+                                        <div id="radio__expert" className={`${styles["radio__btn"]} ${styles["radio__visibility"]}`}></div>
                                     </div>
-                                    <p id="ctx1">Committed</p>
+                                    <p id="ctx1">Expert</p>
                                 </div>
                             </div>
                         </div>
