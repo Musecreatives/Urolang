@@ -17,30 +17,95 @@ const GetStarted = () => {
     let gsClicked = false
     let othersClicked = false
 
-    const selectedMediumStyle = (m1, style1, style2, social) => {
-        if(wrdOfMouthClicked === false || fbClicked ||fbClicked || instaClicked || blogClicked || gsClicked  || othersClicked) {
-            document.getElementById(m1).style.border = style1
-        }
-        else if(wrdOfMouthClicked === false || fbClicked ||fbClicked || instaClicked || blogClicked || gsClicked  || othersClicked) {
-            document.getElementById(m1).style.border = style2
-        }
+
+
+    const selectedMediumStyle1 = (sm, style, social) => {
+        document.getElementById(sm).style.border = style
 
         socialsEngaged.push(social)
-        console.log(socialsEngaged)
-        
-        if(socialsEngaged.includes(social)) {
-            return
-        }
     }
 
-    const wrdOfMouthMedium = () => selectedMediumStyle("m__wrd", onActive, onDeactive, "Word of mouth")
-    const facebookMedium = () => selectedMediumStyle("m__fb", onActive, onDeactive, "Facebook")
-    const instagramMedium = () => selectedMediumStyle("m__instagram", onActive, onDeactive, "Instagram")
-    const blogMedium = () => selectedMediumStyle("m__blog", onActive, onDeactive, "Blog")
-    const googleSearchMedium = () => selectedMediumStyle("m__gs", onActive, onDeactive, "Google search")
-    const otherMedium = () => selectedMediumStyle("m__others", onActive, onDeactive, "Others")
+    const selectedMediumStyle2 = (sm, style, social) => {
+        document.getElementById(sm).style.border = style
+
+        socialsEngaged.pop(social)
+    }
+
+    const wrdOfMouthMedium = () => {
+
+        if(wrdOfMouthClicked === false) {
+            selectedMediumStyle1("m__wrd", onActive, "Word of mouth")
+            wrdOfMouthClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__wrd", onDeactive, "Word of mouth")
+            wrdOfMouthClicked = false
+        }
+    }
+    const facebookMedium = () => {
+        if(fbClicked === false) {
+            selectedMediumStyle1("m__fb", onActive, "Facebook")
+            fbClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__fb", onDeactive, "Facebook")
+            fbClicked = false
+        }
+    }
+    const instagramMedium = () => {
+        if(instaClicked === false) {
+            selectedMediumStyle1("m__instagram", onActive, "Instagram")
+            instaClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__instagram", onDeactive, "Instagram")
+            instaClicked = false
+        }
+    }
+    const blogMedium = () => {
+        if(blogClicked === false) {
+            selectedMediumStyle1("m__blog", onActive, "Blog")
+            blogClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__blog", onDeactive, "Blog")
+            blogClicked = false
+        }
+    }
+    const googleSearchMedium = () => {
+        if(gsClicked === false) {
+            selectedMediumStyle1("m__gs", onActive, "Google search")
+            gsClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__gs", onDeactive, "Google search")
+            gsClicked = false
+        }
+    }
+    const otherMedium = () => {
+        if(othersClicked === false) {
+            selectedMediumStyle1("m__others", onActive, "Others")
+            othersClicked = true
+        }
+        else {
+            selectedMediumStyle2("m__others", onDeactive, "Others")
+            othersClicked = false
+        }
+    }
     
     const brandMediaAwarenessBtn = () => {
+        if(
+            wrdOfMouthClicked !== true &&
+            fbClicked !== true &&
+            instaClicked !== true &&
+            blogClicked !== true &&
+            gsClicked !== true &&
+            othersClicked !== true
+        ) {
+            alert('Please select a medium to proceed')
+            return
+        }
+
         document.getElementById('learning__duration').style.display = 'block'
         document.getElementById('social__outreach__medium').style.display = 'none'
 
